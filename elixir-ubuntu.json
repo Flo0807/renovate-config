@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "regexManagers:dockerfileVersions"
+  ],
+  "packageRules": [
+    {
+      "description": "Group Elixir, Erlang, and Ubuntu updates",
+      "groupName": "Elixir Base Image",
+      "matchDepNames": [
+        "elixir",
+        "erlang",
+        "ubuntu"
+      ]
+    },
+    {
+      "description": "Disable pinDigest updates for ubuntu docker image",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "ubuntu"
+      ],
+      "matchUpdateTypes": [
+        "pinDigest"
+      ],
+      "enabled": false
+    }
+  ]
+}
