@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":disableRateLimiting",
+    ":reviewer(Flo0807)",
+    "helpers:pinGitHubActionDigestsToSemver"
+  ],
+  "packageRules": [
+    {
+      "description": "Automatically merge github-actions updates of type minor, patch, pin, or pinDigest",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "pinDigest"
+      ],
+      "automerge": true
+    }
+  ],
+  "labels": [
+    "dependencies",
+    "{{categories}}"
+  ]
+}
