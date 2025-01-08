@@ -14,7 +14,7 @@
       ]
     },
     {
-      "description": "Disable pinDigest updates for ubuntu docker image",
+      "description": "Disable major and pinDigest updates for ubuntu docker image",
       "matchDatasources": [
         "docker"
       ],
@@ -22,6 +22,7 @@
         "ubuntu"
       ],
       "matchUpdateTypes": [
+        "major",
         "pinDigest"
       ],
       "enabled": false
