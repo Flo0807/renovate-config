@@ -1,0 +1,40 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "regexManagers:dockerfileVersions"
+  ],
+  "packageRules": [
+    {
+      "description": "Group Elixir, Erlang, and Debian updates",
+      "groupName": "Elixir Base Image",
+      "matchDepNames": [
+        "elixir",
+        "erlang",
+        "debian"
+      ]
+    },
+    {
+      "description": "Special versioning regex for debian docker image",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "debian"
+      ],
+      "versioning": "regex:^(?<compatibility>.*)-(?<minor>\\d+)-slim$"
+    },
+    {
+      "description": "Disable pinDigest updates for debian docker image",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "debian"
+      ],
+      "matchUpdateTypes": [
+        "pinDigest"
+      ],
+      "enabled": false
+    }
+  ]
+}
