@@ -3,7 +3,6 @@
   "extends": [
     "config:best-practices",
     ":disableRateLimiting",
-    ":reviewer(Flo0807)",
     "helpers:pinGitHubActionDigestsToSemver"
   ],
   "packageRules": [
