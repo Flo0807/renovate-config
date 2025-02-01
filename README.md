@@ -1,3 +1,5 @@
+[![validate-configs](https://github.com/Flo0807/renovate-config/actions/workflows/validate-configs.yml/badge.svg)](https://github.com/Flo0807/renovate-config/actions/workflows/validate-configs.yml)
+
 # Renovate Config
 
 This repository contains [Renovate](renovatebot.com) base configurations.
