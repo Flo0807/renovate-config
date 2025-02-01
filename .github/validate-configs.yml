@@ -1,0 +1,29 @@
+name: validate-configs
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - uses: actions/setup-node@v4.2.0
+
+      - name: Validate config
+        run: npx --package renovate -- renovate-config-validator --strict
+
+      - name: Validate base config
+        run: npx --package renovate -- renovate-config-validator base.json --strict
+
+      - name: Validate elixir configs
+        run: |
+          npx --package renovate -- renovate-config-validator elixir-debian.json --strict
+          npx --package renovate -- renovate-config-validator elixir-ubuntu.json --strict
+
+      - name: Validate custom managers configs
+        run: |
+          npx --package renovate -- renovate-config-validator customManagers/mixEsbuild.json --strict
+          npx --package renovate -- renovate-config-validator customManagers/mixTailwind.json --strict
