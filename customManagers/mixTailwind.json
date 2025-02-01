@@ -1,0 +1,16 @@
+{
+  "customManagers": [
+    {
+      "customType": "regex",
+      "datasourceTemplate": "npm",
+      "versioningTemplate": "npm",
+      "depNameTemplate": "tailwind",
+      "fileMatch": [
+        "^config/config\\.exs$"
+      ],
+      "matchStrings": [
+        "config\\s+:tailwind,\\s+version:\\s*\"(?<currentValue>[^\"]+)\""
+      ]
+    }
+  ]
+}
