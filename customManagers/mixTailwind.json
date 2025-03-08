@@ -4,7 +4,7 @@
       "customType": "regex",
       "datasourceTemplate": "npm",
       "versioningTemplate": "npm",
-      "depNameTemplate": "tailwind",
+      "depNameTemplate": "tailwindcss",
       "fileMatch": [
         "^config/config\\.exs$"
       ],
