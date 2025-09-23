@@ -8,20 +8,10 @@
   "packageRules": [
     {
       "description": "Automatically merge github-actions updates of type minor, patch, pin, or pinDigest",
-      "matchManagers": [
-        "github-actions"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "pinDigest"
-      ],
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "pinDigest"],
       "automerge": true
     }
   ],
-  "labels": [
-    "dependencies",
-    "{{categories}}"
-  ]
+  "labels": ["dependencies", "{{categories}}"]
 }

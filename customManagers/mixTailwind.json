@@ -5,9 +5,7 @@
       "datasourceTemplate": "npm",
       "versioningTemplate": "npm",
       "depNameTemplate": "tailwindcss",
-      "fileMatch": [
-        "^config/config\\.exs$"
-      ],
+      "fileMatch": ["^config/config\\.exs$"],
       "matchStrings": [
         "config\\s+:tailwind,\\s+version:\\s*\"(?<currentValue>[^\"]+)\""
       ]
