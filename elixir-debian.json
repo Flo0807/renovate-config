@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["customManagers:dockerfileVersions"],
+  "constraints": { "erlang": "^27" },
   "packageRules": [
     {
       "description": "Group Elixir, Erlang, and Debian updates",
